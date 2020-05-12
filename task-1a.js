@@ -225,10 +225,7 @@ form.onsubmit = function(evt) {
 		`;
 
 
-          let div2 = document.createElement('div2');
-        div2.className = "alert";
-        div2.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-        document.body.append(div2);
+          
 
 
 

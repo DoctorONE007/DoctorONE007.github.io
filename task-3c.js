@@ -38,8 +38,8 @@ form.onsubmit = function (evt) {
                 var y = 1;
                 var sqr = [3, 5, 7];
                 while (x >= y) {
-                    x = Math.floor(Math.random() * 10) + 1;
-                    y = Math.floor(Math.random() * 10) + 1;
+                    x = Math.floor(Math.random() * 100) + 1;
+                    y = Math.floor(Math.random() * 100) + 1;
                 }
 
                 var chsecond = "";
@@ -54,11 +54,11 @@ form.onsubmit = function (evt) {
                 var m;
                 
                
-                    var notsq = Math.floor(Math.random() * 10) + 1;
+                    var notsq = Math.floor(Math.random() * 100) + 1;
                     m = notsq;
                     while (notsq >= m) {
-                        notsq = Math.floor(Math.random() * 10) + 1;
-                        m = Math.floor(Math.random() * 10) + 1;
+                        notsq = Math.floor(Math.random() * 100) + 1;
+                        m = Math.floor(Math.random() * 100) + 1;
                     }
                 
                 var problem = "";
@@ -199,10 +199,11 @@ form.onsubmit = function (evt) {
                 var s = resend3[1].split("/");
                 resx3 = String(resend3[0] * s[1] + parseFloat(s[0])) + "/" + String(s[1]);
             }
-            if(parseFloat(String(resx1).split("/")[0])>100 ||parseFloat(String(resx1).split("/")[1])>100||parseFloat(String(resx3).split("/")[0])>100||parseFloat(String(resx3).split("/")[1])>100){
+            if(parseFloat(String(resx1).split("/")[0])>10000 ||parseFloat(String(resx1).split("/")[1])>10000||parseFloat(String(resx3).split("/")[0])>10000||parseFloat(String(resx3).split("/")[1])>10000){
                 z--;
                 break;
                 }
+              
             var sol = "";
             sol += ch;
             sol += "\\frac {" + String(resx1).split("/")[0] + "}" + "{" + String(resx1).split("/")[1] + "}";

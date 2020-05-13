@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Генератор задач</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" type="text/css" href="katex/katex.min.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>Генератор задач</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="katex/katex.min.css">
     <script src="katex/katex.min.js"></script>
-    </head>
-    <body>
-        <div id="header"><h1><a id="index-link" href="index.html">Генератор задач с комплексными числами</a></h1></div>
-        <div id="sidebar">
-            <h3>Темы:</h3>
-            <ul id="tasks-list">
-                <li class="menu-item"><b>Извлечение корня из комплексного числа</b></li>
-                <li class="menu-item"><a href="task-2a.html">Возведение комплексного числа в степень</a></li>
-                <li class="menu-item"><a href="task-3a.html">Операции над комплексными числами</a></li>
-            </ul>
-            
-           
-        </div>
-        <div id="content">
-            <h2>Извлечение корня из комплексного числа</h2>
-            <div class="intro">
-                <p>
-                </p>
-            </div>
-            <div class="tips">
-                <p>
-                    Укажите ключ и Количество вариантов для генерации заданий.
-                </p>
-            </div>
-            <!-- <p id="task-id"><em><span class="task-id-text">ID: #12345</span></em></p> -->
-            
-            <form method="post">
-                <label for="key-field">Ключ</label> <br>
-                <input type="text" name="key" class="key-field"><br>
-                <label for="count-field">Количество вариантов</label> <br>
-                <input type="text" name="count" class="count-field"> <br>
-                <!-- <input type="submit" value="Сгенерировать"> -->
-                <button class="submit-button" type="submit">Сгенерировать</button>
-            </form>
-       
-            <!-- ВСТАВКА -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
-
-            <div id="rightwindow">
-				<!-- from script -->
-				<!-- <div id="wtf"></div> -->
-		</div>
+<body>
+    <div id="header">
+        <h1><a id="index-link" href="index.html">Генератор задач с комплексными числами</a></h1>
+    </div>
+    <div id="sidebar">
+        <h3>Темы:</h3>
+        <ul id="tasks-list">
+            <li class="menu-item"><b>Извлечение корня из комплексного числа</b></li>
+            <li class="menu-item"><a href="task-2a.html">Возведение комплексного числа в степень</a></li>
+            <li class="menu-item"><a href="task-3a.html">Операции над комплексными числами</a></li>
+        </ul>
+        <h3>Сложность:</h3>
+        <ul>
+            <li class="menu-item"><b>Легко</b></li>
+            <li class="menu-item"><a href="task-1b.html">Средне</a></li>
+            <li class="menu-item"><a href="task-1c.html">Сложно</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h2>Извлечение корня из комплексного числа</h2>
+        <div class="intro">
+            <p>
+            </p>
         </div>
-        <script src="task-1a.js"></script>
+        <div class="tips">
+            <p>
+                Укажите ключ и Количество вариантов для генерации заданий.
+            </p>
+        </div>
+        <form method="post">
+            <label for="key-field">Ключ</label> <br>
+            <input type="text" name="key" class="key-field"><br>
+            <label for="count-field">Количество вариантов</label> <br>
+            <input type="text" name="count" class="count-field"> <br>
+            <button class="submit-button" type="submit">Сгенерировать</button>
+        </form>
+        <div id="rightwindow">
+        </div>
+    </div>
+    
+    <script src="task-1a.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
-    </body>
+    <script>
+        $(".extremum-click").click(function () {
+          $(this).siblings(".extremum-slide").slideToggle("slow");
+        });
+    </script>
+</body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

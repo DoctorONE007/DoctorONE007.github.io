@@ -21,8 +21,8 @@ form.onsubmit = function (evt) {
     document.getElementById("rightwindow").innerHTML = ``;
 
     for (let i = 0; i < parseInt(varCount.value); ++i) {
-        var res=0.0006;
-        while(Math.abs(res)<0.001){
+        var res=0.000006;
+        while(Math.abs(res)<0.00001){
         var chfirst = "";
         if ((Math.floor(Math.random() * 2)) == 0) {
             chfirst = "-";
@@ -84,7 +84,7 @@ form.onsubmit = function (evt) {
         problem += "i";
         problem += "\\right)";
 
-        var time = Math.floor(Math.random() * (6 - 2)) + 2;
+        var time = Math.floor(Math.random() * (10 - 5)) + 5;
         problem += "^" + "{" + time + "}";
         var text = `
         <p>
@@ -119,7 +119,7 @@ form.onsubmit = function (evt) {
             i--;
             break;
         }
-        
+      
         str.slice(0, -1);
 
         if (str[0] == "-") {
@@ -135,12 +135,12 @@ form.onsubmit = function (evt) {
         var resx2 = res3[1];
         var x3 = new Fraction(parseFloat(res3[2]));
         var resx3 = x3.toFraction(true);
-        if((parseFloat(res3[0])<0.001)){
+        if((parseFloat(res3[0])<0.00001)){
             res= parseFloat(res3[0]);
             i--;
             break;  
         }
-        if((parseFloat(res3[2])<0.001)){
+        if((parseFloat(res3[2])<0.00001)){
             res= parseFloat(res3[2]);
             i--;
             break;
@@ -158,7 +158,7 @@ form.onsubmit = function (evt) {
             
         }
 
-if(parseFloat(String(resx1).split("/")[0])>1000 ||parseFloat(String(resx1).split("/")[1])>1000||parseFloat(String(resx3).split("/")[0])>1000||parseFloat(String(resx3).split("/")[1])>1000){
+if(parseFloat(String(resx1).split("/")[0])>10000 ||parseFloat(String(resx1).split("/")[1])>10000||parseFloat(String(resx3).split("/")[0])>10000||parseFloat(String(resx3).split("/")[1])>10000){
 i--;
 break;
 }

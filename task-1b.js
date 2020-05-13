@@ -18,7 +18,7 @@ function getrandomexp(arr) {
 
 
 function getrandomn() {
-    return Math.floor(Math.random() * 4) + 2;
+    return Math.floor(Math.random() * (11 - 5) + 5);
 }
 
 
@@ -49,7 +49,7 @@ function getrandom(arrtype) {
 
 function getexpression(l, n, r) {
     var latexString = mainTableStrings[l];
-
+    
     if (l % 3 != 0) {
 
         if (r % 2 != 0) {
@@ -64,6 +64,7 @@ function getexpression(l, n, r) {
             r = r / 2;
             latexString = latexString.replace("\\frac{\\sqrt{3}}{2}", String(r) + "\\sqrt{3}");
             latexString = latexString.replace("\\frac{sqrt{3}}{2}", String(r) + "\\sqrt{3}");
+            latexString = latexString.replace("\\frac{\\sqrt{3}}{2}i", String(r) + "\\sqrt{3}i");
             latexString = latexString.replace("\\frac{1}}{2}", String(r) + " \\sqrt{3}");
             latexString = latexString.replace("\\frac{1}{2}", String(r));
             latexString = latexString.replace("rnumber", "");
@@ -76,7 +77,7 @@ function getexpression(l, n, r) {
 
     latexString = latexString.replace("ndegree", "{" + n + "}");
     latexString = latexString.replace(String(r) + String(r), String(r));
-
+    
     return String(latexString);
 }
 
@@ -195,16 +196,12 @@ form.onsubmit = function (evt) {
         }
         
         
-          
-   
-
-       
 
     }
     $(".extremum-click").text(function() {
         $(this).siblings(".extremum-slide").slideToggle("fast");
       });
-      $(".extremum-click").click(function () {
+    $(".extremum-click").click(function () {
         $(this).siblings(".extremum-slide").slideToggle("fast");
       });
     Math.seedrandom(key.value);
